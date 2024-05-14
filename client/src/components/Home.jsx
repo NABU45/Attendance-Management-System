@@ -1,17 +1,27 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import { GiTeacher } from "react-icons/gi";
 import { PiStudent } from "react-icons/pi";
-import { MdMenuBook } from "react-icons/md";
+import { MdDashboard, MdMenuBook } from "react-icons/md";
 import { FcBusinessContact } from "react-icons/fc";
 import TopHeader from './TopHeader';
+import StudentRegister from '../pages/StudentRegister';
 import HeroSection from './HeroSection';
-
-
+import TeacherRegister from '../pages/TeacherRegister';
 
 const Sidebar = () => {
-
     const [sidebarOpen, setSidebarOpen] = useState(false);
+    const [teacherRegister, setTeacherRegister] = useState(false);
+    const [studentRegister, setStudentRegister] = useState(false);
+    const [topHeaderVisible, setTopHeaderVisible] = useState(false);
+    const [heroSectionVisible , setHeroSectionVisible] = useState(false);
 
+  const closeModals = () => {
+    setTeacherRegister(false);
+    setStudentRegister(false);
+    setTeacherRegister(false);
+    setTopHeaderVisible(false);
+    setHeroSectionVisible(false);
+    };
     return (
         <>
             <div>
@@ -35,7 +45,10 @@ const Sidebar = () => {
                         </div>
 
                         <nav className="mt-10">
-                            <a className="flex items-center px-6 py-2 mt-4 text-gray-100 bg-gray-700 bg-opacity-25" href="/">
+                        <a className="flex items-center px-6 py-2 mt-4 text-gray-100 bg-gray-700 bg-opacity-25" href="/" onClick={() => {
+                                setTopHeaderVisible(true);
+                                setHeroSectionVisible(true);
+                            }}>
                                 <svg className="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                     stroke="currentColor">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
@@ -46,16 +59,23 @@ const Sidebar = () => {
                                 <span className="mx-3">Dashboard</span>
                             </a>
 
+                            <a className="flex items-center px-6 py-2 mt-4 text-gray-500 hover:bg-gray-700 hover:bg-opacity-25 hover:text-gray-100" href="#">
+                                <PiStudent className='w-6 h-6' />
+                                <span onClick={() => {
 
-                            <a class="flex items-center px-6 py-2 mt-4 text-gray-500 hover:bg-gray-700 hover:bg-opacity-25 hover:text-gray-100"
-                                href="#">
-                                <PiStudent className=' w-6 h-6' />
-                                <span class="mx-3">Student</span>
+                                    setStudentRegister(true);
+                                    setHeroSectionVisible(false)
+                                }} className="mx-3">Student</span>
                             </a>
-                            <a class="flex items-center px-6 py-2 mt-4 text-gray-500 hover:bg-gray-700 hover:bg-opacity-25 hover:text-gray-100"
-                                href="#">
-                                <GiTeacher className=' w-6 h-6' />
-                                <span class="mx-3">Teacher</span>
+
+
+                             {/* Teacher button */}
+                            <a className="flex items-center px-6 py-2 mt-4 text-gray-500 hover:bg-gray-700 hover:bg-opacity-25 hover:text-gray-100" href="#">
+                                <GiTeacher className='w-6 h-6' />
+                                <span onClick={() => {
+                                    setTeacherRegister(true);
+                                    setStudentRegister(false);
+                                }} className="mx-3">Teacher</span>
                             </a>
 
                             <a class="flex items-center px-6 py-2 mt-4 text-gray-500 hover:bg-gray-700 hover:bg-opacity-25 hover:text-gray-100"
@@ -70,18 +90,66 @@ const Sidebar = () => {
                                 <span class="mx-3">Contact us</span>
                             </a>
                         </nav>
+
                     </div>
 
-             {/* top header section */}
-
+                    {/* top header section */}
                     <div className="flex flex-col flex-1 overflow-hidden">
-                        <TopHeader/>
-                        <main className="flex-1 overflow-x-hidden overflow-y-auto bg-gray-200">
-                        <HeroSection/>  
-                        </main>
-                    </div >
+                        {topHeaderVisible && <TopHeader />}
+                        {heroSectionVisible && (
+                            <main className="flex-1 overflow-x-hidden overflow-y-auto bg-gray-200">
+                                <h1>
+                                    <HeroSection />
+                                </h1>
+                            </main>
+                        )}
+                    </div>
                 </div >
+
+
+
+
+                {teacherRegister && (
+                    <div className="h-full w-full fixed inset-0 flex justify-center items-center bg-gray-200">
+                          <div  className={`h-screen inset-0 fixed flex justify-center transition-all ${teacherRegister ? "visible" : "invisible"}`}>
+                    <div onClick={(e) => e.stopPropagation()} className={`h-auto w-[100%]  bg-slate-200  rounded-lg shadow-lg ml-[15%] transition-all duration-100 `}>
+                        <TeacherRegister />
+                      
+                    </div>
+                    </div>
+                    </div>
+                    
+                )}
+
+                { topHeaderVisible && (
+                    <div className="h-full w-full fixed inset-0 flex justify-center items-center bg-gray-200">
+
+                        <TopHeader />
+                    </div>
+                )}
+                  { heroSectionVisible && (
+                    <div className="h-full w-full fixed inset-0 flex justify-center items-center bg-gray-200">
+
+                        <HeroSection />
+                    </div>
+                )}
+
+                {/* StudentRegister */}
+             
+
+                      {studentRegister && (
+                    <div className="h-full w-full fixed inset-0 flex justify-center items-center bg-gray-200">
+                          <div  className={`h-screen inset-0 fixed flex justify-center transition-all ${studentRegister ? "visible" : "invisible"}`}>
+                    <div onClick={(e) => e.stopPropagation()} className={`h-auto w-[100%]  bg-slate-100  rounded-lg shadow-lg ml-[15%] transition-all duration-100 `}>
+                        <StudentRegister 
+                        />
+                    </div>
+                    </div>
+                    </div> 
+                )}
+
             </div >
+
         </>
 
     );

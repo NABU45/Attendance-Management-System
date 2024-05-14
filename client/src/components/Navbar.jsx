@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 import { GiTeacher } from "react-icons/gi";
 import { PiStudent } from "react-icons/pi";
-import { MdMenuBook } from "react-icons/md";
+import { MdDashboard, MdMenuBook } from "react-icons/md";
 import { FcBusinessheroSection } from "react-icons/fc";
 import { Link } from 'react-router-dom';
 import HeroSection from './HeroSection';
@@ -42,18 +42,10 @@ function Navbar() {
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
                                 d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"></path>
                         </svg>
-                        <span className="mx-3 "  onClick={() => setHeroSection(true)}>Dashboard</span>
-
-                        <div onClick={closeModals} className={`h-screen inset-0 fixed flex justify-center items-center transition-all ${heroSection ? "visible" : "invisible"}`}>
-                            <div onClick={(e) => e.stopPropagation()} className={`  h-[85%] w-[50%]  bg-slate-200  rounded-lg shadow-lg ml-[35%] transition-all duration-100 ${heroSection ? "scale-1 translate-y-10" : "scale-900 translate-x-500"} px-0 py-4`}>
-                                
-                                <div className="my-5 w-full border-b-2 border-blue-600 rounded-full"></div>
-                                <HeroSection />
-                            </div>
-                        </div>
+                        <span className="mx-3 " >Dashboard</span>
 
                     </a>
-
+                    
 
                     <a class="flex items-center px-6 py-2 mt-4 text-gray-500 hover:bg-gray-700 hover:bg-opacity-25 hover:text-gray-100"
                         href="#">
@@ -75,8 +67,9 @@ function Navbar() {
                     <a class="flex items-center px-6 py-2 mt-4 text-gray-500 hover:bg-gray-700 hover:bg-opacity-25 hover:text-gray-100"
                         href="#">
                         <FcBusinessheroSection className=' w-6 h-6' />
-                        <span class="mx-3">heroSection us</span>
+                        <span class="mx-3">Contact us</span>
                     </a>
+                   
                 </nav>
             </div>
 
