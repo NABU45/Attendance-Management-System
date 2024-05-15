@@ -6,8 +6,8 @@ function HeroSection() {
     return (
         <div>
             <div className="container px-6 py-8 mx-auto">
-                <h3 className="text-3xl font-medium text-gray-700">Dashboard</h3>
-
+                <h3 className="text-3xl font-medium text-gray-900">Dashboard</h3>
+                
                 <div className="mt-4">
                     <div className="flex flex-wrap -mx-6">
                         <div className="w-full px-6 sm:w-1/2 xl:w-1/3">
@@ -90,7 +90,7 @@ function HeroSection() {
                 </div>
 
                 <div className="mt-8">
-                <TeacherRegister/>
+                {/* <TeacherRegister/> */}
                 </div>
             </div>
 

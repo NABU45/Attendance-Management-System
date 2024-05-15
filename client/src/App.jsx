@@ -7,6 +7,7 @@ import ProtectedRoute from './components/ProtectedRoute';
 import RegisterProvider from './providers/RegisterProvider';
 import RegistrationForm from './components/RegistrationForm';
 import HeroSection from './components/HeroSection';
+import Course from './pages/Course';
 
 
 function App() {
@@ -23,13 +24,17 @@ function App() {
     },
     {
       path:"/home",
-      element: <Home/>
+      element: <Home className=""/>
     },
     {
       path:"/dashboard",
       element:<HeroSection/>
 
     },
+    // {
+   //   path:"/course",
+     //   element:<Course/>
+    // },
   
     {
       path: "/",

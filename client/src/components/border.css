@@ -1,0 +1,51 @@
+.border-gradient {
+  position: absolute;
+  inset: 0;
+  border: 6px solid transparent; /* Set border width and make it transparent */
+  border-image: linear-gradient(to bottom right, #3b82f6, #7c3aed, #ec4899); /* Apply gradient */
+  border-image-slice: 1; /* Ensure the whole border is filled with the gradient */
+  border-radius: 100%;
+   /* Match the border radius of the inner element */
+}
+
+
+.component1 {
+    background-image: url('https://th.bing.com/th?q=PHP+Development+Illustration&w=120&h=120&c=1&rs=1&qlt=90&cb=1&dpr=1.5&pid=InlineBlock&mkt=en-WW&cc=NP&setlang=en&adlt=moderate&t=1&mw=247'); /* Set the background image */
+    background-size: cover; /* Ensure the image covers the entire container */
+    background-position: center; /* Center the background image */
+  }
+  @keyframes fadeInFromTop {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .course-component {
+    animation: fadeInFromTop 0.9s ease-in-out forwards;
+  }
+
+
+
+  /*course component 2 */
+  .component2 {
+    background-image: url('https://blogger.googleusercontent.com/img/a/AVvXsEgPLzIwzUIGjm7busNxtmEVMwbkAkO_qc66F2iwCUoa4NaY1nDl_LH4_xPkbzsSYswDgmfaCqYuqP3CjrR3RnrcHt0qtEOpDOURS4-Us8oloPIOdYpDbXeHgUUM62Qm_D36m8ygPJrSIz9YgE6YWZqGZgWozr1tKcOGflHW0qo4ysEaCqJZPboevO0gICSV=s16000'); /* Set the background image */
+    background-size: cover; /* Ensure the image covers the entire container */
+    background-position: center; /* Center the background image */
+  }
+
+  .component3 {
+    background-image: url('https://wildlearner.com/learn-static/courses/course-6b587bdf-f23f-4623-9c26-1ba37491467f/images_1652107298113.jpg'); /* Set the background image */
+    background-size: cover; /* Ensure the image covers the entire container */
+    background-position: center; /* Center the background image */
+  }
+
+  .component4 {
+    background-image: url('https://th.bing.com/th/id/R.bb3bee2cda574a14208e2050430b5507?rik=d8pBJfUFZ8SBvQ&pid=ImgRaw&r=0'); /* Set the background image */
+    background-size: cover; /* Ensure the image covers the entire container */
+    background-position: center; /* Center the background image */
+  }

@@ -4,8 +4,6 @@ import { GiTeacher } from "react-icons/gi";
 import { PiStudent } from "react-icons/pi";
 import { MdDashboard, MdMenuBook } from "react-icons/md";
 import { FcBusinessheroSection } from "react-icons/fc";
-import { Link } from 'react-router-dom';
-import HeroSection from './HeroSection';
 
 function Navbar() {
 
