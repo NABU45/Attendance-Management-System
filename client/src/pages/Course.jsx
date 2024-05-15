@@ -7,7 +7,7 @@ import CourseComponent4 from '../components/CourseComponent4';
 
 function Course() { 
   return (
-    <div className="flex flex-col flex-1 overflow-hidden">
+    <div className="flex flex-col flex-1 overflow-hidden bg-gray-200">
       <TopHeader />
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-4 py-10">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-14">

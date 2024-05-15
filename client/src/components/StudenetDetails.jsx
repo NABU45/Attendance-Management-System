@@ -6,8 +6,8 @@ function StudenetDetails(props) {
     }
     return (
         <div>
-            <div className="-mx-4 sm:-mx-8 px-4 sm:px-8  overflow-x-auto">
-                <div className="inline-block min-w-full shadow rounded-lg overflow-hidden">
+            <div className="-mx-4 sm:-mx-8 px-4 sm:px-8  overflow-x-auto bg-gray-400">
+                <div className="inline-block min-w-full shadow rounded-lg overflow-hidden ">
                     <table className="min-w-full leading-normal">
                         <thead>
                             {/* <tr>
@@ -19,8 +19,8 @@ function StudenetDetails(props) {
                             </tr> */}
                         </thead>
                         <tbody className=''>
-                            <tr className='flex justify-between  border-gray-200  bg-white text-sm '>
-                                <td className="px-5 py-8 ">
+                            <tr className='flex justify-between  border-gray-200  bg-gray-400 text-sm '>
+                                <td className="px-4 py-8 ">
                                     <p className="text-gray-900 whitespace-no-wrap">{props.studentId}</p>
                                 </td>
                                 <td className="px-5 py-5 ">

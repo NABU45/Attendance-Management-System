@@ -71,7 +71,7 @@ function RegistrationForm() {
 
   return (
 
-    <div className="w-screen min-h-screen animate-float flex flex-row-reverse  bg-gray-300  overflow-hidden">
+    <div className="w-screen min-h-screen animate-float flex flex-row-reverse  bg-gray-400  overflow-hidden">
       <div>
            <img  className='hidden md:ml-[20%] h-auto lg:block lg:w-[60%] lg:h-[60%]  md:w-[70%] sm:invisible md:visible mt-20' src={RegisterPic} alt="" />
        </div>

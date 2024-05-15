@@ -9,6 +9,7 @@ import HeroSection from './HeroSection';
 import TeacherRegister from '../pages/TeacherRegister';
 import Course from '../pages/Course';
 import ContactUs from '../pages/Contactus';
+
 // import { Link } from 'react-router-dom';
 
 const Sidebar = () => {
@@ -30,7 +31,7 @@ const Sidebar = () => {
     };
     return (
         <>
-           <div className="flex h-screen bg-gray-200">
+           <div className="flex h-screen bg-gray-500">
                 {/* Overlay */}
                 <div
                     className={`fixed inset-0 z-20 transition-opacity bg-black opacity-50 lg:hidden ${sidebarOpen ? 'block' : 'hidden'}`}
@@ -157,7 +158,7 @@ const Sidebar = () => {
                 <div className={`h-screen inset-0 fixed flex justify-center transition-all ${studentRegister ? "visible" : "invisible"}`}>
                     <div onClick={(e) => e.stopPropagation()} className={`h-auto w-[100%]  bg-slate-100  rounded-lg shadow-lg ml-[15%] transition-all duration-100 `}>
                         <StudentRegister
-                        />
+                        /> 
                     </div>
                 </div>
             </div>
