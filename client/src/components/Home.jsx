@@ -29,9 +29,18 @@ const Sidebar = () => {
         setCourseVisible(false);
         setContactUSVisible(false);
     };
+
+    const [isDark, setIsDark] = useState(false);
+
+    const toggleTheme = () => {
+      setIsDark(!isDark);
+    };
     return (
         <>
+
+  
            <div className="flex h-screen bg-gray-500">
+
                 {/* Overlay */}
                 <div
                     className={`fixed inset-0 z-20 transition-opacity bg-black opacity-50 lg:hidden ${sidebarOpen ? 'block' : 'hidden'}`}
@@ -165,7 +174,7 @@ const Sidebar = () => {
         )
     }
 
-         /</div>   
+         </div>  
 
         </>
 
