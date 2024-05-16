@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import { Link, useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
-import RegisterPic from "../images/login.svg"
+import RegisterPic from "../images/queue-animate.svg"
 
 
 
@@ -73,7 +73,7 @@ function RegistrationForm() {
 
     <div className="w-screen min-h-screen animate-float flex flex-row-reverse  bg-gray-400  overflow-hidden">
       <div>
-           <img  className='hidden md:ml-[20%] h-auto lg:block lg:w-[60%] lg:h-[60%]  md:w-[70%] sm:invisible md:visible mt-20' src={RegisterPic} alt="" />
+           <img  className='hidden md:block w-48 h-auto lg:block lg:w-[600px] lg:h-[600px] sm:invisible md:visible mt-20' src={RegisterPic} alt="" />
        </div>
       <div className=''>
 
@@ -88,34 +88,34 @@ function RegistrationForm() {
                 <span className="w-1/2">
                   <label htmlFor="firstname" className="block text-xs font-semibold text-gray-600 uppercase">Firstname</label>
                   <input onChange={handelFirstNameChange} value={firstname}
-                    id="firstname" type="text" name="firstname" placeholder="John" autoComplete="given-name" className="block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner" required />
+                    id="firstname" type="text" name="firstname" placeholder="John" autoComplete="given-name" className="block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner rounded-md"  required />
                 </span>
 
                 <span className="w-1/2">
                   <label htmlFor="lastname" className="block text-xs font-semibold text-gray-600 uppercase">Lastname</label>
                   <input onChange={handellastNameChange} value={lastname}
-                    id="lastname" type="text" name="lastname" placeholder="Doe" autoComplete="family-name" className="block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner" required />
+                    id="lastname" type="text" name="lastname" placeholder="Doe" autoComplete="family-name" className="block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner rounded-md" required />
                 </span>
 
               </div>
               <label htmlFor="email" className="block mt-2 text-xs font-semibold text-gray-600 uppercase">E-mail</label>
               <input onChange={handelEmailChange} value={email}
-                id="email" type="email" name="email" placeholder="john.doe@company.com" autoComplete="email" className="block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner" required />
+                id="email" type="email" name="email" placeholder="john.doe@company.com" autoComplete="email" className="block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner rounded-md" required />
 
               <label htmlFor="password" className="block mt-2 text-xs font-semibold text-gray-600 uppercase">Password</label>
               <input onChange={handelPasswordChange} value={password}
-                id="password" type="password" name="password" placeholder="********" autoComplete="new-password" className="block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner" required />
+                id="password" type="password" name="password" placeholder="********" autoComplete="new-password" className="block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner rounded-md" required />
 
               <label htmlFor="password-confirm" className="block mt-2 text-xs font-semibold text-gray-600 uppercase">Confirm password</label>
               <input onChange={handelConfirmPasswordChange} value={confirmpassword}
-                id="password-confirm" type="password" name="password-confirm" placeholder="********" autoComplete="new-password" className="block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner" required />
-
+                id="password-confirm" type="password" name="password-confirm" placeholder="********" autoComplete="new-password" className="block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner rounded-md" required />
+<br />
               <button onClick={handleSubmit}
-                type="submit" className="w-full py-3 mt-6 font-medium tracking-widest text-white uppercase bg-black shadow-lg focus:outline-none hover:bg-gray-900 hover:shadow-none">
+                type="submit" className="flex items-center justify-center focus:outline-none text-white text-sm sm:text-base bg-blue-600 hover:bg-blue-700  py-2 w-full transition duration-150 ease-in rounded-md">
                 Sign up
               </button>
               <Link to="/login">
-                <p className="flex justify-between inline-block mt-4 text-xs text-gray-500 cursor-pointer hover:text-black">Already registered?</p>
+                <p className=" py-3 inline-flex items-center font-bold text-blue-500 hover:text-blue-700 text-xs text-center">Already have been registered?</p>
               </Link>
             </form>
           </div>

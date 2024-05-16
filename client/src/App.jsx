@@ -7,6 +7,7 @@ import ProtectedRoute from './components/ProtectedRoute';
 import RegisterProvider from './providers/RegisterProvider';
 import RegistrationForm from './components/RegistrationForm';
 import HeroSection from './components/HeroSection';
+import Settings from './components/Settings';
 
 
 
@@ -31,6 +32,10 @@ function App() {
       path:"/dashboard",
       element:<HeroSection/>
 
+    },
+    {
+      path:"/setting",
+      element:<Settings/>
     },
     // {
    //   path:"/course",

@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import toast from "react-hot-toast";
 import { Link, useNavigate } from "react-router-dom";
-import LoginPic from "../images/loginp.svg"
+// import LoginPic from "../images/loginp.svg"
+import  LoginPic from "../images/secure-login-animate.svg"
 
 
 function Login() {
@@ -64,9 +65,9 @@ function Login() {
 
   return (
     <>
-    <div className="w-screen min-h-screen animate-float flex items-center justify-center gap-32 bg-gray-400 overflow-y-hidden" > 
+    <div className="w-screen min-h-screen animate-float flex items-center px-52 bg-gray-400 overflow-y-hidden" > 
       <div>
-      <img width={400} className='hidden md:block w-48 h-auto lg:block lg:w-80 lg:h-90' src={LoginPic} alt="LogIn Image" />
+      <img className='hidden md:block w-48 h-auto lg:block lg:w-[600px] lg:h-[600px]' src={LoginPic} alt="LogIn Image" />
       </div>
       <div>{/* <!-- component --> */}
       <link rel="stylesheet" href="https://kit-pro.fontawesome.com/releases/v5.15.1/css/pro.min.css" />

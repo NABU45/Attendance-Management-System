@@ -1,6 +1,8 @@
 import React, { useState } from "react";
-import { FaGithub, FaGoogle, FaTwitter } from 'react-icons/fa';
+import { FaFacebook, FaGithub } from 'react-icons/fa';
 import TopHeader from "../components/TopHeader";
+import { CiLinkedin } from "react-icons/ci";
+
 
 
 const ContactUs = () => {
@@ -47,16 +49,16 @@ const ContactUs = () => {
     }
   };
 
-  const handleGoogleLogin = () => {
-    window.location.href = 'https://accounts.google.com/login';
+  const handleFacebook = () => {
+    window.location.href = 'https://www.facebook.com/profile.php?id=100077696241013';
   };
 
   const handleGithub = () => {
     window.location.href = 'https://github.com/NABU45';
   };
 
-  const handleTwitterLogin = () => {
-    window.location.href = 'https://twitter.com/login';
+  const handleLinkdin = () => {
+    window.location.href = 'https://www.linkedin.com/in/nabin-japrel-73137123a/';
   };
 
 
@@ -66,10 +68,10 @@ const ContactUs = () => {
     <TopHeader />
       <div className="w-[100%]   rounded-lg  px-10 flex flex-col ml-auto mt-0 relative z-10">
         <button
-          onClick={handleGoogleLogin}
+          onClick={handleFacebook}
           aria-label="Continue with google" role="button" className="focus:ring-2 focus:ring-offset-1  py-2 px-4 border rounded-lg border-gray-700 flex items-center w-full mt-4  focus:border-indigo-500">
-          <FaGoogle />
-          <p className="text-base font-medium ml-4 text-gray-700">Continue with Google</p>
+          <FaFacebook />
+          <p className="text-base font-medium ml-4 text-gray-700">Continue with Facebook</p>
         </button>
         <button
           onClick={handleGithub}
@@ -78,9 +80,9 @@ const ContactUs = () => {
           <p className="text-base font-medium ml-4 text-gray-700">Continue with Github</p>
         </button>
         <button
-          onClick={handleTwitterLogin}
+          onClick={handleLinkdin}
           aria-label="Continue with twitter" role="button" className="focus:outline-none  focus:ring-2 focus:ring-offset-1 focus:ring-gray-700 py-2 px-4 border rounded-lg border-gray-700 flex items-center w-full mt-4">
-          <FaTwitter />
+       <CiLinkedin />
           <p className="text-base font-medium ml-4 text-gray-700">Continue with Twitter</p>
         </button>
         <div className="w-full flex items-center justify-between py-2">

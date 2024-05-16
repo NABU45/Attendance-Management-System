@@ -17,7 +17,7 @@ function CourseComponent2() {
   return (
     <div>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div className="component2 rounded-2xl w-72 ">
+        <div className="component2 course-card rounded-2xl w-72 ">
       <div className="content ">
             <div className={`course-component  rounded-lg shadow-lg p-12 flex flex-col justify-center items-center ${isVisible ? 'animate-fadeInFromTop' : ''}`}>
       <div className="mb-8">

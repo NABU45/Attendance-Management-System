@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { GiTeacher } from "react-icons/gi";
 import { PiStudent } from "react-icons/pi";
-import { MdDashboard, MdMenuBook } from "react-icons/md";
+import { MdOutlineLibraryBooks } from "react-icons/md";
 import { FcBusinessContact } from "react-icons/fc";
 import TopHeader from './TopHeader';
 import StudentRegister from '../pages/StudentRegister';
@@ -9,6 +9,9 @@ import HeroSection from './HeroSection';
 import TeacherRegister from '../pages/TeacherRegister';
 import Course from '../pages/Course';
 import ContactUs from '../pages/Contactus';
+import { SiTicktick } from "react-icons/si";
+
+
 
 // import { Link } from 'react-router-dom';
 
@@ -75,11 +78,17 @@ const Sidebar = () => {
                     </a>
 
                     <a className="flex items-center px-6 py-2 mt-4 text-gray-500 hover:bg-gray-700 hover:bg-opacity-25 hover:text-gray-100" href="#">
+                        <SiTicktick  className='w-6 h-6' />
+                        <span onClick={() => {
+
+                        }} className="mx-3">Attendance</span>
+                    </a>
+
+                    <a className="flex items-center px-6 py-2 mt-4 text-gray-500 hover:bg-gray-700 hover:bg-opacity-25 hover:text-gray-100" href="#">
                         <PiStudent className='w-6 h-6' />
                         <span onClick={() => {
 
                             setStudentRegister(true);
-                            setContactUSVisible(false);
                         }} className="mx-3">Student</span>
                     </a>
 
@@ -93,7 +102,8 @@ const Sidebar = () => {
                         }} className="mx-3">Teacher</span>
                     </a>
                     <a className="flex items-center px-6 py-2 mt-4 text-gray-500 hover:bg-gray-700 hover:bg-opacity-25 hover:text-gray-100" href="#">
-                        <GiTeacher className='w-6 h-6' />
+                       
+                      <MdOutlineLibraryBooks  className='w-6 h-6' />
                         <span onClick={() => {
                             setCourseVisible(true)
                         }} className="mx-3">Course</span>
@@ -147,8 +157,7 @@ const Sidebar = () => {
     }
 
     {/* courses */ }
-    {
-        courseVisible && (
+    { courseVisible && (
             <div className="h-full w-full fixed inset-0 flex justify-center items-center bg-gray-200">
                 <div className={`h-screen inset-0 fixed flex justify-center transition-all ${courseVisible ? "visible" : "invisible"}`}>
                     <div onClick={(e) => e.stopPropagation()} className={`h-auto w-[100%]  bg-slate-200  rounded-lg shadow-lg ml-[15%] transition-all duration-100 `}>
@@ -156,9 +165,7 @@ const Sidebar = () => {
                     </div>
                 </div>
             </div>
-
-        )
-    }
+    )}
 
     {/* StudentRegister */ }
     {
